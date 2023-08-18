@@ -13,7 +13,6 @@
   display: flex;
   justify-content: center;
   z-index: 1;
-  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
 }
 
 .nav-list {
@@ -22,6 +21,7 @@
   gap: 20px;
   padding: 10px 0;
   margin: 0;
+  align-items: center;
 }
 
 .nav-item {
