@@ -24,16 +24,20 @@ export default function Home() {
           Get started by exploring the following features:
         </p>
 
-        <div className="feature-columns">
-          <div className="feature-column">
+        <div className="feature-grid">
+          <div className="feature-row">
             <button onClick={() => navigateToPage('/goal-setting')}>Goal Setting</button>
             <button onClick={() => navigateToPage('/personalized-workout')}>Personalized Workout Plans</button>
-            <button onClick={() => navigateToPage('/exercise-library')}>Exercise Library</button>
           </div>
-          <div className="feature-column">
+          <div className="feature-row">
+            <button onClick={() => navigateToPage('/exercise-library')}>Exercise Library</button>
             <button onClick={() => navigateToPage('/custom-workouts')}>Custom Workouts</button>
+          </div>
+          <div className="feature-row">
             <button onClick={() => navigateToPage('/progress-tracking')}>Progress Tracking</button>
             <button onClick={() => navigateToPage('/reminders')}>Reminder and Scheduling</button>
+          </div>
+          <div className="feature-row">
             <button onClick={() => navigateToPage('/nutrition-tips')}>Nutrition and Hydration Tips</button>
           </div>
         </div>
