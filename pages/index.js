@@ -1,9 +1,16 @@
 import Head from 'next/head';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
-import Link from 'next/link';
+import { useRouter } from 'next/router'; // Import useRouter for programmatic navigation
 
 export default function Home() {
+  const router = useRouter();
+
+  // Function to navigate to the specified page
+  const navigateToPage = (page) => {
+    router.push(page);
+  };
+
   return (
     <div className="container">
       <Head>
@@ -17,15 +24,19 @@ export default function Home() {
           Get started by exploring the following features:
         </p>
 
-        <ul className="feature-list">
-          <li><Link href="/goal-setting">Goal Setting</Link></li>
-          <li><Link href="/personalized-workout">Personalized Workout Plans</Link></li>
-          <li><Link href="/exercise-library">Exercise Library</Link></li>
-          <li><Link href="/custom-workouts">Custom Workouts</Link></li>
-          <li><Link href="/progress-tracking">Progress Tracking</Link></li>
-          <li><Link href="/reminders">Reminder and Scheduling</Link></li>
-          <li><Link href="/nutrition-tips">Nutrition and Hydration Tips</Link></li>
-        </ul>
+        <div className="feature-columns">
+          <div className="feature-column">
+            <button onClick={() => navigateToPage('/goal-setting')}>Goal Setting</button>
+            <button onClick={() => navigateToPage('/personalized-workout')}>Personalized Workout Plans</button>
+            <button onClick={() => navigateToPage('/exercise-library')}>Exercise Library</button>
+          </div>
+          <div className="feature-column">
+            <button onClick={() => navigateToPage('/custom-workouts')}>Custom Workouts</button>
+            <button onClick={() => navigateToPage('/progress-tracking')}>Progress Tracking</button>
+            <button onClick={() => navigateToPage('/reminders')}>Reminder and Scheduling</button>
+            <button onClick={() => navigateToPage('/nutrition-tips')}>Nutrition and Hydration Tips</button>
+          </div>
+        </div>
       </main>
 
       <Footer />
