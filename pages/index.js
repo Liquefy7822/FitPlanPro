@@ -30,7 +30,7 @@ export default function Home() {
             <button onClick={() => navigateToPage('/personalized-workout')}>Personalized Workout Plans</button>
           </div>
           <div className="feature-row">
-            <button onClick={() => navigateToPage('/exercise-library')}>Exercise Library</button>
+            <button onClick={() => navigateToPage('/ExerciseLibrary')}>Exercise Library</button>
             <button onClick={() => navigateToPage('/custom-workouts')}>Custom Workouts</button>
           </div>
           <div className="feature-row">
