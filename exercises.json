@@ -1,0 +1,320 @@
+{
+  "warmup": [
+    {
+      "name": "Head Tilt",
+      "description": "Gently tilt your head to one side, stretching the neck muscles.",
+      "image": "https://i.imgur.com/exercise1.jpg",
+      "video": "https://i.imgur.com/exercise1.mp4"
+    },
+    {
+      "name": "Shoulders",
+      "description": "Rotate your shoulders in a circular motion to warm up the shoulder muscles.",
+      "image": "https://i.imgur.com/exercise2.jpg",
+      "video": "https://i.imgur.com/exercise2.mp4"
+    },
+    {
+      "name": "Triceps",
+      "description": "Stretch your triceps by reaching one arm overhead and bending the elbow.",
+      "image": "https://i.imgur.com/exercise3.jpg",
+      "video": "https://i.imgur.com/exercise3.mp4"
+    },
+    {
+      "name": "Biceps",
+      "description": "Stretch your biceps by extending one arm forward and pulling your fingers back.",
+      "image": "https://i.imgur.com/exercise4.jpg",
+      "video": "https://i.imgur.com/exercise4.mp4"
+    },
+    {
+      "name": "Forward, Backwards, and Upwards Lunges",
+      "description": "Perform forward, backward, and upward lunges to warm up the legs.",
+      "image": "https://i.imgur.com/exercise5.jpg",
+      "video": "https://i.imgur.com/exercise5.mp4"
+    },
+    {
+      "name": "Back Cross Hand Touch",
+      "description": "Stand with your feet apart and touch your opposite hand to your opposite foot behind your back.",
+      "image": "https://i.imgur.com/exercise6.jpg",
+      "video": "https://i.imgur.com/exercise6.mp4"
+    },
+    {
+      "name": "Back Arch",
+      "description": "Arch your back backward while standing to stretch the back muscles.",
+      "image": "https://i.imgur.com/exercise7.jpg",
+      "video": "https://i.imgur.com/exercise7.mp4"
+    },
+    {
+      "name": "Quadriceps",
+      "description": "Stretch your quadriceps by bending one leg and pulling your heel toward your buttocks.",
+      "image": "https://i.imgur.com/exercise8.jpg",
+      "video": "https://i.imgur.com/exercise8.mp4"
+    },
+    {
+      "name": "Cross Leg Hamstring",
+      "description": "Sit with your legs crossed and reach forward to stretch your hamstrings.",
+      "image": "https://i.imgur.com/exercise9.jpg",
+      "video": "https://i.imgur.com/exercise9.mp4"
+    },
+    {
+      "name": "Normal Hamstring",
+      "description": "Sit with your legs extended forward and reach for your toes to stretch your hamstrings.",
+      "image": "https://i.imgur.com/exercise10.jpg",
+      "video": "https://i.imgur.com/exercise10.mp4"
+    },
+    {
+      "name": "Full Squat",
+      "description": "Perform a full squat by bending your knees and hips to lower your body.",
+      "image": "https://i.imgur.com/exercise11.jpg",
+      "video": "https://i.imgur.com/exercise11.mp4"
+    },
+    {
+      "name": "Touch Floor",
+      "description": "Stand with your feet apart and reach down to touch the floor.",
+      "image": "https://i.imgur.com/exercise12.jpg",
+      "video": "https://i.imgur.com/exercise12.mp4"
+    },
+    {
+      "name": "Hold Ankles",
+      "description": "Sit with your legs extended forward and reach down to hold your ankles.",
+      "image": "https://i.imgur.com/exercise13.jpg",
+      "video": "https://i.imgur.com/exercise13.mp4"
+    },
+    {
+      "name": "Windmill",
+      "description": "Stand with your arms extended to the sides and twist your upper body to touch your opposite foot.",
+      "image": "https://i.imgur.com/exercise14.jpg",
+      "video": "https://i.imgur.com/exercise14.mp4"
+    },
+    {
+      "name": "Lunges Stretch",
+      "description": "Perform lunges to stretch the legs and hip flexors.",
+      "image": "https://i.imgur.com/exercise15.jpg",
+      "video": "https://i.imgur.com/exercise15.mp4"
+    },
+    {
+      "name": "Frequency",
+      "description": "Warm up by moving your arms and legs quickly.",
+      "image": "https://i.imgur.com/exercise16.jpg",
+      "video": "https://i.imgur.com/exercise16.mp4"
+    },
+    {
+      "name": "Butterfly",
+      "description": "Sit with your feet together, holding your feet with your hands, and gently press your knees toward the floor.",
+      "image": "https://i.imgur.com/exercise17.jpg",
+      "video": "https://i.imgur.com/exercise17.mp4"
+    },
+    {
+      "name": "Straight Leg (Arms Stretch Upwards and Also Hold Ankle)",
+      "description": "Extend your legs forward, stretch your arms upward, and hold your ankles.",
+      "image": "https://i.imgur.com/exercise18.jpg",
+      "video": "https://i.imgur.com/exercise18.mp4"
+    },
+    {
+      "name": "Figure 7 Hurdle Stretch",
+      "description": "Create a figure-7 shape with your legs to stretch the hip and glute muscles.",
+      "image": "https://i.imgur.com/exercise19.jpg",
+      "video": "https://i.imgur.com/exercise19.mp4"
+    },
+    {
+      "name": "Glutes",
+      "description": "Stretch your glutes by crossing one leg over the other and pulling your knee toward your chest.",
+      "image": "https://i.imgur.com/exercise20.jpg",
+            "video": "https://i.imgur.com/exercise20.mp4"
+    },
+    {
+      "name": "Ankle Knee Alignment",
+      "description": "Stand with your feet hip-width apart and align your ankles and knees.",
+      "image": "https://i.imgur.com/exercise21.jpg",
+      "video": "https://i.imgur.com/exercise21.mp4"
+    },
+    {
+      "name": "V-Shape Calf Stretch",
+      "description": "Create a V-shape with your legs to stretch the calf muscles.",
+      "image": "https://i.imgur.com/exercise22.jpg",
+      "video": "https://i.imgur.com/exercise22.mp4"
+    },
+    {
+      "name": "Cobra",
+      "description": "Lie face down, place your hands under your shoulders, and arch your upper body upward.",
+      "image": "https://i.imgur.com/exercise23.jpg",
+      "video": "https://i.imgur.com/exercise23.mp4"
+    },
+    {
+      "name": "Parachute",
+      "description": "Stand with your arms outstretched to the sides and swing them in a circular motion.",
+      "image": "https://i.imgur.com/exercise24.jpg",
+      "video": "https://i.imgur.com/exercise24.mp4"
+    }
+  ],
+  "mobility": [
+    {
+      "name": "Head Rotation",
+      "description": "Rotate your head in a circular motion to improve neck flexibility.",
+      "image": "https://i.imgur.com/exercise25.jpg",
+      "video": "https://i.imgur.com/exercise25.mp4"
+    },
+    {
+      "name": "Shoulder Rotation",
+      "description": "Rotate your shoulders in a circular motion to improve shoulder mobility.",
+      "image": "https://i.imgur.com/exercise26.jpg",
+      "video": "https://i.imgur.com/exercise26.mp4"
+    },
+    {
+      "name": "Arm Swing",
+      "description": "Swing your arms forward and backward to warm up and stretch the shoulder muscles.",
+      "image": "https://i.imgur.com/exercise27.jpg",
+      "video": "https://i.imgur.com/exercise27.mp4"
+    },
+    // Add more mobility exercises here
+  ],
+  "flexibility": [
+    {
+      "name": "Butterfly",
+      "description": "Sit with your feet together, holding your feet with your hands, and gently press your knees toward the floor.",
+      "image": "https://i.imgur.com/exercise28.jpg",
+      "video": "https://i.imgur.com/exercise28.mp4"
+    },
+    {
+      "name": "Seated Forward Bend",
+      "description": "Sit with your legs extended forward and bend at your hips to reach for your toes.",
+      "image": "https://i.imgur.com/exercise29.jpg",
+      "video": "https://i.imgur.com/exercise29.mp4"
+    },
+        {
+      "name": "Head Rotation",
+      "description": "Rotate your head in a circular motion to improve neck flexibility.",
+      "image": "https://i.imgur.com/exercise25.jpg",
+      "video": "https://i.imgur.com/exercise25.mp4"
+    },
+    {
+      "name": "Shoulder Rotation",
+      "description": "Rotate your shoulders in a circular motion to improve shoulder mobility.",
+      "image": "https://i.imgur.com/exercise26.jpg",
+      "video": "https://i.imgur.com/exercise26.mp4"
+    },
+    {
+      "name": "Arm Swing",
+      "description": "Swing your arms forward and backward to warm up and stretch the shoulder muscles.",
+      "image": "https://i.imgur.com/exercise27.jpg",
+      "video": "https://i.imgur.com/exercise27.mp4"
+    },
+    {
+      "name": "Butterfly",
+      "description": "Sit with your feet together, holding your feet with your hands, and gently press your knees toward the floor.",
+      "image": "https://i.imgur.com/exercise28.jpg",
+      "video": "https://i.imgur.com/exercise28.mp4"
+    },
+    {
+      "name": "Seated Forward Bend",
+      "description": "Sit with your legs extended forward and bend at your hips to reach for your toes.",
+      "image": "https://i.imgur.com/exercise29.jpg",
+      "video": "https://i.imgur.com/exercise29.mp4"
+    },
+    {
+      "name": "Hug Knees",
+      "description": "Sit with your legs bent and hug your knees to your chest, rounding your back.",
+      "image": "https://i.imgur.com/exercise41.jpg",
+      "video": "https://i.imgur.com/exercise41.mp4"
+    },
+    {
+      "name": "Flexibility and Mobility of Arm",
+      "description": "Rotate your arms in circular motions to enhance arm flexibility and mobility.",
+      "image": "https://i.imgur.com/exercise42.jpg",
+      "video": "https://i.imgur.com/exercise42.mp4"
+    },
+    {
+      "name": "Arm Swings",
+      "description": "Swing your arms forward and backward to warm up and stretch the shoulder muscles.",
+      "image": "https://i.imgur.com/exercise43.jpg",
+      "video": "https://i.imgur.com/exercise43.mp4"
+    },
+    {
+      "name": "Forward Lunges",
+      "description": "Perform forward lunges, stepping forward with one leg and bending the knee.",
+      "image": "https://i.imgur.com/exercise44.jpg",
+      "video": "https://i.imgur.com/exercise44.mp4"
+    },
+    {
+      "name": "Lean Back on Back Leg After Lunges",
+      "description": "Lean back on the back leg after performing lunges to stretch the hip flexors.",
+      "image": "https://i.imgur.com/exercise45.jpg",
+      "video": "https://i.imgur.com/exercise45.mp4"
+    },
+    {
+      "name": "Flexibility of Legs, Primarily Also Mobility",
+      "description": "Enhance the flexibility of your legs, with a focus on hip mobility.",
+      "image": "https://i.imgur.com/exercise46.jpg",
+      "video": "https://i.imgur.com/exercise46.mp4"
+    }
+  ]
+}
+
+  ],
+  "other": [
+    {
+      "name": "Vertical Jump",
+      "description": "Jump as high as you can while pushing off the ground with both feet.",
+      "image": "https://i.imgur.com/exercise30.jpg",
+      "video": "https://i.imgur.com/exercise30.mp4"
+    },
+    {
+      "name": "Straight Leg Run",
+      "description": "Run with your legs straight, focusing on quick, short steps.",
+      "image": "https://i.imgur.com/exercise31.jpg",
+      "video": "https://i.imgur.com/exercise31.mp4"
+    },
+    {
+      "name": "High Knees",
+      "description": "Run in place while lifting your knees as high as possible with each step.",
+      "image": "https://i.imgur.com/exercise32.jpg",
+      "video": "https://i.imgur.com/exercise32.mp4"
+    },
+    {
+      "name": "Butt Kicks",
+      "description": "Jog in place and kick your buttocks with your heels during each stride.",
+      "image": "https://i.imgur.com/exercise33.jpg",
+      "video": "https://i.imgur.com/exercise33.mp4"
+    },
+    {
+      "name": "Race Walk",
+      "description": "Walk briskly with a straight knee, keeping one foot on the ground at all times.",
+      "image": "https://i.imgur.com/exercise34.jpg",
+      "video": "https://i.imgur.com/exercise34.mp4"
+    },
+    {
+      "name": "Neck Flexion",
+      "description": "Gently lower your chin towards your chest to stretch the neck muscles.",
+      "image": "https://i.imgur.com/exercise35.jpg",
+      "video": "https://i.imgur.com/exercise35.mp4"
+    },
+    {
+      "name": "Lateral Neck Flexion",
+      "description": "Tilt your head to one side to stretch the neck muscles on that side.",
+      "image": "https://i.imgur.com/exercise36.jpg",
+      "video": "https://i.imgur.com/exercise36.mp4"
+    },
+    {
+      "name": "Cross-body Shoulder Stretch",
+      "description": "Pull one arm across your chest to stretch the shoulder muscles.",
+      "image": "https://i.imgur.com/exercise37.jpg",
+      "video": "https://i.imgur.com/exercise37.mp4"
+    },
+    {
+      "name": "Overhead Triceps and Shoulder Stretch",
+      "description": "Extend one arm overhead and bend the elbow to stretch the triceps and shoulders.",
+      "image": "https://i.imgur.com/exercise38.jpg",
+      "video": "https://i.imgur.com/exercise38.mp4"
+    },
+    {
+      "name": "Wrist Extension Stretch",
+      "description": "Extend your wrist and fingers backward to stretch the wrist extensors.",
+      "image": "https://i.imgur.com/exercise39.jpg",
+      "video": "https://i.imgur.com/exercise39.mp4"
+    },
+    {
+      "name": "Wrist Flexion Stretch",
+      "description": "Flex your wrist and fingers forward to stretch the wrist flexors.",
+      "image": "https://i.imgur.com/exercise40.jpg",
+      "video": "https://i.imgur.com/exercise40.mp
+  ]
+}
+
