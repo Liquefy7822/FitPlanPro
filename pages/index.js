@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Your Fitness App</title>
+        <title>FitPlanPro</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
