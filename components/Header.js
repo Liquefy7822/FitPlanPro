@@ -1,16 +1,22 @@
-import Link from 'next/link';
+import { useState } from 'react';
 import Image from 'next/image';
+import Sidebar from './Sidebar'; // Import the Sidebar component
 
 export default function Header({ title }) {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <header className="header">
-      <div className="header-content">
-        <Image src="https://i.imgur.com/SqwGFl8.jpg" alt="App Logo" width={80} height={80} />
-        <h1 className="app-title">{title}</h1>
-        <a href="https://github.com/Liquefy7822/FitPlanPro">
-          <Image src="/github-logo.svg" alt="GitHub" width={40} height={40} />
-        </a>
-      </div>
+      <button className="toggle-button" onClick={toggleSidebar}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </button>
+      <Sidebar isOpen={isSidebarOpen} title={title} /> {/* Render the Sidebar component */}
     </header>
   );
 }
