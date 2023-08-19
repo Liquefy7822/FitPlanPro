@@ -6,7 +6,7 @@ export default function Sidebar({ isOpen, title }) {
     <div className={`sidebar ${isOpen ? 'open' : ''}`}>
       <div className="header-content">
         <Image src="https://i.imgur.com/SqwGFl8.jpg" alt="App Logo" width={80} height={80} />
-        <h1 className="app-title">{title}</h1>
+        <h1 className="app-title">Welcome to my app</h1>
       </div>
       <nav className="nav">
         <ul className="nav-list">
