@@ -1,22 +1,9 @@
-import { useState } from 'react';
-import Image from 'next/image';
-import Sidebar from './Sidebar'; // Import the Sidebar component
+import React from 'react';
 
-export default function Header({ title }) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
-
+export default function Header() {
   return (
     <header className="header">
-      <button className="toggle-button" onClick={toggleSidebar}>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-      </button>
-      <Sidebar isOpen={isSidebarOpen} title={title} /> {/* Render the Sidebar component */}
+      {/* No content inside the header */}
     </header>
   );
 }
