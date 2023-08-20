@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link'; // Import Link from Next.js
+import Link from 'next/link';
 
 function GoalSettingForm() {
   const [formData, setFormData] = useState({
@@ -9,6 +9,7 @@ function GoalSettingForm() {
     time_available: 0,
   });
   const [workoutPlan, setWorkoutPlan] = useState([]);
+  const [userScore, setUserScore] = useState(0);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -39,7 +40,58 @@ function GoalSettingForm() {
     } catch (error) {
       console.error('Error:', error);
     }
+
+    // Calculate user's score based on form inputs
+    let score = 0;
+    // Add scoring logic based on the user's inputs
+    score += calculateScoreForGoals(formData.goals);
+    score += calculateScoreForAge(formData.age);
+    score += calculateScoreForFitnessLevel(formData.fitness_level);
+    score += calculateScoreForTimeAvailable(formData.time_available);
+
+    // Set the user's score
+    setUserScore(score);
   };
+
+  // Define scoring functions for each input
+  const calculateScoreForGoals = (goals) => {
+    // Implement scoring logic for goals here
+    return goals.length * 5; // Example: Score based on the number of selected goals
+  };
+
+  const calculateScoreForAge = (age) => {
+    // Implement scoring logic for age here
+    return Math.max(0, 30 - age); // Example: Score based on age (higher age, lower score)
+  };
+
+  const calculateScoreForFitnessLevel = (fitness_level) => {
+    // Implement scoring logic for fitness level here
+    if (fitness_level === 'beginner') {
+      return 10;
+    } else if (fitness_level === 'intermediate') {
+      return 20;
+    } else if (fitness_level === 'advanced') {
+      return 30;
+    }
+    return 0;
+  };
+
+  const calculateScoreForTimeAvailable = (time_available) => {
+    // Implement scoring logic for time available here
+    return Math.min(time_available / 10, 30); // Example: Score based on time available (max score is 30)
+  };
+
+  // Define different messages based on the user's score
+  let message = '';
+  if (userScore <= 10) {
+    message = "Your score is low. Consider a beginner's workout plan.";
+  } else if (userScore <= 20) {
+    message = "Your score is moderate. Try an intermediate workout plan.";
+  } else if (userScore <= 30) {
+    message = "Your score is good. You can follow an advanced workout plan.";
+  } else {
+    message = "Your score is excellent. You are ready for an advanced workout!";
+  }
 
   return (
     <div>
@@ -90,8 +142,9 @@ function GoalSettingForm() {
             onChange={handleInputChange}
           />
         </div>
+        <button type="submit">Generate Workout Plan</button>
       </form>
-      {/* Link to the personalized workout page */}
+      <p>{message}</p>
       <Link href="/personalized-workout">
         <button>Go to Personalized Workout Page</button>
       </Link>
@@ -100,5 +153,3 @@ function GoalSettingForm() {
 }
 
 export default GoalSettingForm;
-
-
