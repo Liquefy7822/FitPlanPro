@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react';
-import Head from 'next/head';
-import Header from '@components/Header';
-import Footer from '@components/Footer';
+import Header from '@components/Header'; // Import your header component
+import Footer from '@components/Footer'; // Import your footer component
+import { useRouter } from 'next/router';
 
 function ExerciseLibrary() {
   const [exerciseList, setExerciseList] = useState({});
+  const router = useRouter();
 
   useEffect(() => {
     // Load the exercise list when the component mounts
-    fetch('/exercises.json')
+    fetch('/exercises.json') // Update the path to exercises.json
       .then((response) => response.json())
       .then((data) => {
         // Store the exercise list in state
@@ -19,8 +20,13 @@ function ExerciseLibrary() {
       });
   }, []);
 
+  const goBack = () => {
+    router.back();
+  };
+
   return (
     <div>
+      <Header title="Exercise Library" /> {/* Header */}
       <h1>Exercise Library</h1>
       {Object.keys(exerciseList).map((category) => (
         <div key={category}>
@@ -40,8 +46,11 @@ function ExerciseLibrary() {
           </ul>
         </div>
       ))}
+      <button onClick={goBack}>Go Back</button> {/* Back button */}
+      <Footer /> {/* Footer */}
     </div>
   );
 }
 
 export default ExerciseLibrary;
+
