@@ -139,7 +139,7 @@ function GoalSettingForm() {
             <option value="intermediate">Intermediate</option>
             <option value="advanced">Advanced</option>
           </select>
-       
+        </div> {/* Add closing tag for <div> */}
         <div>
           <label htmlFor="time_available">Time Available (minutes):</label>
           <input
