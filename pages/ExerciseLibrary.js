@@ -7,17 +7,35 @@ function ExerciseLibrary() {
   const [exerciseList, setExerciseList] = useState({});
   const router = useRouter();
 
+  // Sample exercise data (you can replace this with your actual data)
+  const sampleExerciseData = {
+    Category1: [
+      {
+        name: 'Exercise 1',
+        description: 'Description of Exercise 1',
+        image: 'image1.jpg',
+        video: 'video1.mp4',
+      },
+      {
+        name: 'Exercise 2',
+        description: 'Description of Exercise 2',
+        image: 'image2.jpg',
+        video: 'video2.mp4',
+      },
+    ],
+    Category2: [
+      {
+        name: 'Exercise 3',
+        description: 'Description of Exercise 3',
+        image: 'image3.jpg',
+        video: 'video3.mp4',
+      },
+    ],
+  };
+
   useEffect(() => {
-    // Load the exercise list when the component mounts
-    fetch('/exercises.json') // Update the path to exercises.json
-      .then((response) => response.json())
-      .then((data) => {
-        // Store the exercise list in state
-        setExerciseList(data);
-      })
-      .catch((error) => {
-        console.error('Error loading exercise list:', error);
-      });
+    // You can set the exercise list here if needed
+    setExerciseList(sampleExerciseData);
   }, []);
 
   const goBack = () => {
@@ -53,4 +71,3 @@ function ExerciseLibrary() {
 }
 
 export default ExerciseLibrary;
-
