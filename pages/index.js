@@ -27,7 +27,7 @@ export default function Home() {
         <div className="feature-grid">
           <div className="feature-row">
             <button onClick={() => navigateToPage('/goal-setting')}>Goal Setting</button>
-            <button onClick={() => navigateToPage('/personalized-workout')}>Personalized Workout Plans</button>
+            <button onClick={() => navigateToPage('/nutrition-tips')}>Nutrition and Hydration Tips</button>
           </div>
           <div className="feature-row">
             <button onClick={() => navigateToPage('/ExerciseLibrary')}>Exercise Library</button>
@@ -37,9 +37,7 @@ export default function Home() {
             <button onClick={() => navigateToPage('/progress-tracking')}>Progress Tracking</button>
             <button onClick={() => navigateToPage('/reminders')}>Reminder and Scheduling</button>
           </div>
-          <div className="feature-row">
-            <button onClick={() => navigateToPage('/nutrition-tips')}>Nutrition and Hydration Tips</button>
-          </div>
+
         </div>
       </main>
 
