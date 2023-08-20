@@ -44,33 +44,26 @@ function GoalSettingForm() {
       console.error('Error:', error);
     }
 
-    // Calculate user's score based on form inputs
     let score = 0;
-    // Add scoring logic based on the user's inputs
+
     score += calculateScoreForGoals(formData.goals);
     score += calculateScoreForAge(formData.age);
     score += calculateScoreForFitnessLevel(formData.fitness_level);
     score += calculateScoreForTimeAvailable(formData.time_available);
 
-    // Set the user's score
     setUserScore(score);
-    // Show the score message
     setShowScoreMessage(true);
   };
 
-  // Define scoring functions for each input
   const calculateScoreForGoals = (goals) => {
-    // Implement scoring logic for goals here
-    return goals.length * 5; // Example: Score based on the number of selected goals
+    return goals.length * 5;
   };
 
   const calculateScoreForAge = (age) => {
-    // Implement scoring logic for age here
-    return Math.max(0, 30 - age); // Example: Score based on age (higher age, lower score)
+    return Math.max(0, 30 - age);
   };
 
   const calculateScoreForFitnessLevel = (fitness_level) => {
-    // Implement scoring logic for fitness level here
     if (fitness_level === 'beginner') {
       return 10;
     } else if (fitness_level === 'intermediate') {
@@ -82,11 +75,9 @@ function GoalSettingForm() {
   };
 
   const calculateScoreForTimeAvailable = (time_available) => {
-    // Implement scoring logic for time available here
-    return Math.min(time_available / 10, 30); // Example: Score based on time available (max score is 30)
+    return Math.min(time_available / 10, 30);
   };
 
-  // Define different messages based on the user's score
   let message = '';
   if (showScoreMessage) {
     if (userScore <= 10) {
@@ -139,7 +130,7 @@ function GoalSettingForm() {
             <option value="intermediate">Intermediate</option>
             <option value="advanced">Advanced</option>
           </select>
-        </div> {/* Add closing tag for <div> */}
+        </div>
         <div>
           <label htmlFor="time_available">Time Available (minutes):</label>
           <input
@@ -148,6 +139,7 @@ function GoalSettingForm() {
             id="time_available"
             value={formData.time_available}
             onChange={handleInputChange}
+          />
         </div>
         <button type="submit">Generate Workout Plan</button>
       </form>
@@ -158,4 +150,3 @@ function GoalSettingForm() {
 }
 
 export default GoalSettingForm;
-
