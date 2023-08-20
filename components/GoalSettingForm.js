@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Header from '@components/Header';
+import Footer from '@components/Footer';
 
 function GoalSettingForm() {
   const [formData, setFormData] = useState({
@@ -10,6 +12,7 @@ function GoalSettingForm() {
   });
   const [workoutPlan, setWorkoutPlan] = useState([]);
   const [userScore, setUserScore] = useState(0);
+  const [showScoreMessage, setShowScoreMessage] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -51,6 +54,8 @@ function GoalSettingForm() {
 
     // Set the user's score
     setUserScore(score);
+    // Show the score message
+    setShowScoreMessage(true);
   };
 
   // Define scoring functions for each input
@@ -83,18 +88,21 @@ function GoalSettingForm() {
 
   // Define different messages based on the user's score
   let message = '';
-  if (userScore <= 10) {
-    message = "Your score is low. Consider a beginner's workout plan.";
-  } else if (userScore <= 20) {
-    message = "Your score is moderate. Try an intermediate workout plan.";
-  } else if (userScore <= 30) {
-    message = "Your score is good. You can follow an advanced workout plan.";
-  } else {
-    message = "Your score is excellent. You are ready for an advanced workout!";
+  if (showScoreMessage) {
+    if (userScore <= 10) {
+      message = "Your score is low. Consider a beginner's workout plan.";
+    } else if (userScore <= 20) {
+      message = "Your score is moderate. Try an intermediate workout plan.";
+    } else if (userScore <= 30) {
+      message = "Your score is good. You can follow an advanced workout plan.";
+    } else {
+      message = "Your score is excellent. You are ready for an advanced workout!";
+    }
   }
 
   return (
     <div>
+      <Header title="Goal Setting" />
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="goals">Fitness Goals:</label>
@@ -131,7 +139,7 @@ function GoalSettingForm() {
             <option value="intermediate">Intermediate</option>
             <option value="advanced">Advanced</option>
           </select>
-        </div>
+       
         <div>
           <label htmlFor="time_available">Time Available (minutes):</label>
           <input
@@ -140,16 +148,14 @@ function GoalSettingForm() {
             id="time_available"
             value={formData.time_available}
             onChange={handleInputChange}
-          />
         </div>
         <button type="submit">Generate Workout Plan</button>
       </form>
-      <p>{message}</p>
-      <Link href="/personalized-workout">
-        <button>Go to Personalized Workout Page</button>
-      </Link>
+      {showScoreMessage && <p>{message}</p>}
+      <Footer />
     </div>
   );
 }
 
 export default GoalSettingForm;
+
