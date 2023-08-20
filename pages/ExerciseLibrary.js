@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react';
+import Head from 'next/head';
+import Header from '@components/Header';
+import Footer from '@components/Footer';
 
 function ExerciseLibrary() {
   const [exerciseList, setExerciseList] = useState({});
