@@ -90,7 +90,6 @@ function GoalSettingForm() {
             onChange={handleInputChange}
           />
         </div>
-        <button type="submit">Generate Workout Plan</button>
       </form>
       {/* Link to the personalized workout page */}
       <Link href="/personalized-workout">
