@@ -15,7 +15,7 @@ export default function Home() {
     <div className="container">
       <Head>
         <title>FitPlanPro</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/FitPlanPro.png" />
       </Head>
 
       <main>
