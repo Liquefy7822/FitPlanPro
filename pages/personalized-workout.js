@@ -1,5 +1,7 @@
 
 import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
 import { useRouter } from 'next/router';
 
 // Sample workout data (replace with your actual data)
