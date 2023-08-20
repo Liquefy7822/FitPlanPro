@@ -144,6 +144,23 @@ function GoalSettingForm() {
         <button type="submit">Generate Workout Plan</button>
       </form>
       {showScoreMessage && <p>{message}</p>}
+
+      {/* Buttons to navigate to exercise pages */}
+      <div>
+        <Link href="/exercises/easy">
+          <button>Easy Exercises</button>
+        </Link>
+        <Link href="/exercises/medium">
+          <button>Medium Exercises</button>
+        </Link>
+        <Link href="/exercises/hard">
+          <button>Hard Exercises</button>
+        </Link>
+        <Link href="/exercises/very-hard">
+          <button>Very Hard Exercises</button>
+        </Link>
+      </div>
+
       <Footer />
     </div>
   );
