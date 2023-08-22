@@ -7,11 +7,10 @@ function CustomWorkoutsPage() {
   const [newWorkout, setNewWorkout] = useState({
     name: '',
     workout: '',
-    repetitions: 0, // New feature: Number of repetitions
-    duration: 0,   // New feature: Duration in minutes
+    repetitions: 0,
+    duration: 0,
   });
 
-  // Function to add a new custom workout
   const handleAddWorkout = () => {
     if (
       newWorkout.workout.trim() !== '' &&
@@ -45,15 +44,17 @@ function CustomWorkoutsPage() {
           value={newWorkout.workout}
           onChange={(e) => setNewWorkout({ ...newWorkout, workout: e.target.value })}
         ></textarea>
+        <label>Repetitions (optional):</label>
         <input
           type="number"
-          placeholder="Repetitions (optional)"
+          placeholder="Enter the number of repetitions"
           value={newWorkout.repetitions}
           onChange={(e) => setNewWorkout({ ...newWorkout, repetitions: parseInt(e.target.value) })}
         />
+        <label>Duration (minutes, optional):</label>
         <input
           type="number"
-          placeholder="Duration (minutes, optional)"
+          placeholder="Enter the duration in minutes"
           value={newWorkout.duration}
           onChange={(e) => setNewWorkout({ ...newWorkout, duration: parseInt(e.target.value) })}
         />
@@ -75,4 +76,5 @@ function CustomWorkoutsPage() {
 }
 
 export default CustomWorkoutsPage;
+
 
