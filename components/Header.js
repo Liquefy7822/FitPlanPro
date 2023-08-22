@@ -1,11 +1,9 @@
 import React from 'react';
 
-export default function Header() {
-  return (
-    <header className="header">
-      // Function to save user data to local storage.
+// Function to save user data to local storage.
 function saveUserData(data) {
-  localStorage.setItem('userData', JSON.stringify(data))}
+  localStorage.setItem('userData', JSON.stringify(data))
+}
 
 // Function to retrieve user data from local storage
 function getUserData() {
@@ -18,21 +16,30 @@ function clearUserData() {
   localStorage.removeItem('userData');
 }
 
-// Example usage:
-// Save data
-const userData = { username: 'john_doe', email: 'john@example.com' };
-saveUserData(userData);
+export default function Header() {
+  // Example usage:
+  // Save data
+  const userData = { username: 'john_doe', email: 'john@example.com' };
+  saveUserData(userData);
 
-// Retrieve data
-const savedUserData = getUserData();
-if (savedUserData) {
-  console.log('User data:', savedUserData);
-} else {
-  console.log('User data not found.');
+  // Retrieve data
+  const savedUserData = getUserData();
+  if (savedUserData) {
+    console.log('User data:', savedUserData);
+  } else {
+    console.log('User data not found.');
+  }
+
+  // Remove data
+  // clearUserData();
+
+  return (
+    <header className="header">
+      {/* Your header content here */}
+    </header>
+  );
 }
 
-// Remove data
-// clearUserData();
 
     </header>
   );
