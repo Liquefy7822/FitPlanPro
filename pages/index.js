@@ -37,6 +37,10 @@ export default function Home() {
             <button onClick={() => navigateToPage('/progress-tracking')}>Progress Tracking</button>
             <button onClick={() => navigateToPage('/reminders')}>Reminder and Scheduling</button>
           </div>
+          <div className="feature-row">
+            <button onClick={() => navigateToPage('/profile')}>profile</button>
+            
+          </div>
 
         </div>
       </main>
