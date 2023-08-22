@@ -4,19 +4,28 @@ import Footer from '@components/Footer';
 
 function CustomWorkoutsPage() {
   const [workouts, setWorkouts] = useState([]);
-  const [newWorkout, setNewWorkout] = useState('');
-  const [workoutName, setWorkoutName] = useState('');
+  const [newWorkout, setNewWorkout] = useState({
+    name: '',
+    workout: '',
+    repetitions: 0, // New feature: Number of repetitions
+    duration: 0,   // New feature: Duration in minutes
+  });
 
   // Function to add a new custom workout
   const handleAddWorkout = () => {
-    if (newWorkout.trim() !== '' && workoutName.trim() !== '') {
-      const updatedWorkouts = [
-        ...workouts,
-        { name: workoutName, workout: newWorkout },
-      ];
+    if (
+      newWorkout.workout.trim() !== '' &&
+      newWorkout.name.trim() !== '' &&
+      (newWorkout.repetitions > 0 || newWorkout.duration > 0)
+    ) {
+      const updatedWorkouts = [...workouts, { ...newWorkout }];
       setWorkouts(updatedWorkouts);
-      setNewWorkout('');
-      setWorkoutName('');
+      setNewWorkout({
+        name: '',
+        workout: '',
+        repetitions: 0,
+        duration: 0,
+      });
     }
   };
 
@@ -28,14 +37,26 @@ function CustomWorkoutsPage() {
         <input
           type="text"
           placeholder="Workout Name"
-          value={workoutName}
-          onChange={(e) => setWorkoutName(e.target.value)}
+          value={newWorkout.name}
+          onChange={(e) => setNewWorkout({ ...newWorkout, name: e.target.value })}
         />
         <textarea
           placeholder="Enter your custom workout"
-          value={newWorkout}
-          onChange={(e) => setNewWorkout(e.target.value)}
+          value={newWorkout.workout}
+          onChange={(e) => setNewWorkout({ ...newWorkout, workout: e.target.value })}
         ></textarea>
+        <input
+          type="number"
+          placeholder="Repetitions (optional)"
+          value={newWorkout.repetitions}
+          onChange={(e) => setNewWorkout({ ...newWorkout, repetitions: parseInt(e.target.value) })}
+        />
+        <input
+          type="number"
+          placeholder="Duration (minutes, optional)"
+          value={newWorkout.duration}
+          onChange={(e) => setNewWorkout({ ...newWorkout, duration: parseInt(e.target.value) })}
+        />
         <button onClick={handleAddWorkout}>Save Workout</button>
       </div>
       <ul>
@@ -43,6 +64,8 @@ function CustomWorkoutsPage() {
           <li key={index}>
             <h2>{workout.name}</h2>
             <p>{workout.workout}</p>
+            {workout.repetitions > 0 && <p>Repetitions: {workout.repetitions}</p>}
+            {workout.duration > 0 && <p>Duration: {workout.duration} minutes</p>}
           </li>
         ))}
       </ul>
@@ -52,3 +75,4 @@ function CustomWorkoutsPage() {
 }
 
 export default CustomWorkoutsPage;
+
