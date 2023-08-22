@@ -5,8 +5,7 @@ export default function Header() {
     <header className="header">
       // Function to save user data to local storage
 function saveUserData(data) {
-  localStorage.setItem('userData', JSON.stringify(data));
-}
+  localStorage.setItem('userData', JSON.stringify(data))}
 
 // Function to retrieve user data from local storage
 function getUserData() {
