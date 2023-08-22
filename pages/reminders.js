@@ -6,28 +6,30 @@ function RemindersPage() {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState('');
   const [showCompleted, setShowCompleted] = useState(false);
-  const [completedTasks, setCompletedTasks] = useState([]);
 
   const handleAddTask = () => {
     if (newTask.trim() !== '') {
-      setTasks([...tasks, newTask]);
+      setTasks([...tasks, { text: newTask, completed: false }]);
       setNewTask('');
     }
   };
 
-  const handleToggleCompleted = (taskIndex) => {
+  const toggleCompleted = (index) => {
     const updatedTasks = [...tasks];
-    updatedTasks.splice(taskIndex, 1);
-
-    const completedTask = tasks[taskIndex];
-    setCompletedTasks([...completedTasks, completedTask]);
-
+    updatedTasks[index].completed = !updatedTasks[index].completed;
     setTasks(updatedTasks);
   };
 
-  const handleRemoveCompleted = () => {
-    setCompletedTasks([]);
+  const removeCompleted = () => {
+    const incompleteTasks = tasks.filter((task) => !task.completed);
+    setTasks(incompleteTasks);
   };
+
+  const sortedTasks = [...tasks].sort((a, b) => {
+    if (a.completed && !b.completed) return 1;
+    if (!a.completed && b.completed) return -1;
+    return 0;
+  });
 
   return (
     <div>
@@ -53,24 +55,24 @@ function RemindersPage() {
         </label>
       </div>
       <ul>
-        {tasks.map((task, index) => (
+        {sortedTasks.map((task, index) => (
           <li key={index}>
             <span
               style={{
-                textDecoration: showCompleted && completedTasks.includes(task) ? 'line-through' : 'none',
+                textDecoration: task.completed ? 'line-through' : 'none',
               }}
             >
-              {task}
+              {task.text}
             </span>
-            {!completedTasks.includes(task) && (
-              <button onClick={() => handleToggleCompleted(index)}>Complete</button>
+            {!task.completed && (
+              <button onClick={() => toggleCompleted(index)}>Complete</button>
             )}
           </li>
         ))}
       </ul>
       {showCompleted && (
         <div>
-          <button onClick={handleRemoveCompleted}>Remove Completed</button>
+          <button onClick={removeCompleted}>Remove Completed</button>
         </div>
       )}
       <Footer />
