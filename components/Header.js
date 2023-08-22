@@ -3,7 +3,7 @@ import React from 'react';
 export default function Header() {
   return (
     <header className="header">
-      // Function to save user data to local storage
+      // Function to save user data to local storage.
 function saveUserData(data) {
   localStorage.setItem('userData', JSON.stringify(data))}
 
