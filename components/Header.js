@@ -5,5 +5,3 @@ import React from 'react';
       {/* Your header content here */}
     </header>
   );
-}
-
