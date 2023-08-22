@@ -5,9 +5,9 @@ import Footer from '@components/Footer';
 function RemindersPage() {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState('');
-  const [showCompleted, setShowCompleted] = useState(false);
 
-  const handleAddTask = () => {
+  const handleAddTask = (e) => {
+    e.preventDefault();
     if (newTask.trim() !== '') {
       setTasks([...tasks, { text: newTask, completed: false }]);
       setNewTask('');
@@ -35,42 +35,38 @@ function RemindersPage() {
     <div>
       <Header title="Reminders" />
       <h1>Reminders</h1>
-      <div>
-        <input
-          type="text"
-          placeholder="Add a reminder"
-          value={newTask}
-          onChange={(e) => setNewTask(e.target.value)}
-        />
-        <button onClick={handleAddTask}>Add</button>
-      </div>
-      <div>
-        <label>
+      <form onSubmit={handleAddTask}>
+        <div>
           <input
-            type="checkbox"
-            checked={showCompleted}
-            onChange={() => setShowCompleted(!showCompleted)}
-          />{' '}
-          Show Completed
-        </label>
-      </div>
+            type="text"
+            placeholder="Add a reminder"
+            value={newTask}
+            onChange={(e) => setNewTask(e.target.value)}
+          />
+          <button type="submit">Add</button>
+        </div>
+      </form>
       <ul>
         {sortedTasks.map((task, index) => (
           <li key={index}>
-            <span
-              style={{
-                textDecoration: task.completed ? 'line-through' : 'none',
-              }}
-            >
-              {task.text}
-            </span>
-            {!task.completed && (
-              <button onClick={() => toggleCompleted(index)}>Complete</button>
-            )}
+            <label>
+              <input
+                type="checkbox"
+                checked={task.completed}
+                onChange={() => toggleCompleted(index)}
+              />
+              <span
+                style={{
+                  textDecoration: task.completed ? 'line-through' : 'none',
+                }}
+              >
+                {task.text}
+              </span>
+            </label>
           </li>
         ))}
       </ul>
-      {showCompleted && (
+      {tasks.some((task) => task.completed) && (
         <div>
           <button onClick={removeCompleted}>Remove Completed</button>
         </div>
@@ -81,4 +77,3 @@ function RemindersPage() {
 }
 
 export default RemindersPage;
-
