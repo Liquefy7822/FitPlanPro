@@ -34,7 +34,7 @@ export default function Home() {
             <button onClick={() => navigateToPage('/custom-workouts')}>Custom Workouts</button>
           </div>
           <div className="feature-row">
-            <button onClick={() => navigateToPage('/profile')}>profile</button>
+            <button onClick={() => navigateToPage('/pages/profile')}>profile</button>
             <button onClick={() => navigateToPage('/reminders')}>Reminder and Scheduling</button> 
           </div>
 
