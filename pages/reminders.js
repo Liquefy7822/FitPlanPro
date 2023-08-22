@@ -11,6 +11,7 @@ function RemindersPage() {
   ]);
 
   const [newReminder, setNewReminder] = useState('');
+  const [showCompleted, setShowCompleted] = useState(false);
 
   // Function to toggle the checkbox
   const handleCheckboxChange = (index) => {
@@ -44,9 +45,17 @@ function RemindersPage() {
         />
         <button onClick={handleAddReminder}>Add</button>
       </div>
+      <label>
+        <input
+          type="checkbox"
+          checked={showCompleted}
+          onChange={() => setShowCompleted(!showCompleted)}
+        />
+        Show Completed
+      </label>
       <ul>
         {reminders.map((reminder, index) => (
-          <li key={index}>
+          <li key={index} style={{ display: showCompleted || !reminder.checked ? 'block' : 'none' }}>
             <label>
               <input
                 type="checkbox"
