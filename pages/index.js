@@ -28,6 +28,8 @@ export default function Home() {
           <div className="feature-row">
             <button onClick={() => navigateToPage('/goal-setting')}>Goal Setting</button>
             <button onClick={() => navigateToPage('/nutrition-tips')}>Nutrition and Hydration Tips</button>
+            <button onClick={() => navigateToPage('/protected')}>Protected</button>
+
           </div>
           <div className="feature-row">
             <button onClick={() => navigateToPage('/ExerciseLibrary')}>Exercise Library</button>
